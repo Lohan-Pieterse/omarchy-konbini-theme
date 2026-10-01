@@ -60,7 +60,7 @@ omarchy theme bg next
 | cyan       | ![#6FB4C7](https://placehold.co/16x16/6FB4C7/6FB4C7.png) | `#6FB4C7` |
 | blue       | ![#5C89C2](https://placehold.co/16x16/5C89C2/5C89C2.png) | `#5C89C2` |
 | magenta    | ![#A587A8](https://placehold.co/16x16/A587A8/A587A8.png) | `#A587A8` |
-| brown      | ![#8B6B52](https://placehold.co/16x16/8B6B52/8B6B52.png) | `#8B6B52` |
+| brown      | ![#A27E61](https://placehold.co/16x16/A27E61/A27E61.png) | `#A27E61` |
 
 Full values in [`colors.toml`](colors.toml).
 
@@ -82,15 +82,17 @@ the wet streets, foliage and skies instead of smoothing it away.
 
 The signage was repainted by hand after generation: real-world brand logos
 were replaced with the fictional Sunset Mart, and garbled AI text on the
-store signs, banners and crossing plates was replaced with real Japanese
-(24時間営業, おにぎり・お弁当, 踏切注意, 年中無休).
+store signs, banners, street signs and crossing plates was replaced with
+real Japanese (24時間営業, おにぎり・お弁当, 踏切注意, 年中無休, 止まれ,
+自転車通行可, 自動ドア, たばこ). Every sign says something you would actually
+see on a Japanese street.
 
 ## Lock screen
 
 Nothing to configure — Omarchy's lock screen automatically blurs whichever
-background is currently active and re-uses `hyprland_active_border` from
-`colors.toml` for the password box outline, so it always matches. You can
-safely preview it without actually locking your session:
+background is currently active, and `shell.lock.toml` gives the password box
+the same amber-to-blue gradient outline as your windows. You can safely
+preview it without actually locking your session:
 
 ```bash
 omarchy shell lock preview      # show it
@@ -99,9 +101,12 @@ omarchy shell lock hidePreview  # dismiss it
 
 ## Away screen (optional)
 
-Konbini ships an idle screensaver, `screensaver.txt`: a little night-street
-scene with the Sunset Mart, a streetlamp and the moon, drawn in by Omarchy's
-random text effects in place of the stock logo. Omarchy keeps the screensaver
+Konbini ships an idle screensaver, `screensaver.txt`: the quiet lane from
+`03-quiet-street.jpg` in solid blocks (houses, a power line, a crescent moon
+and stars), drawn in by Omarchy's text effects in place of the stock logo.
+It is 66×17, so it fits the screensaver terminal even on small HiDPI
+screens. Omarchy picks the effect and its colors at random each cycle;
+themes can't change those. Omarchy keeps the screensaver
 in your personal branding rather than in the theme, so it takes one step:
 
 ```bash
@@ -124,12 +129,14 @@ Preview it with `omarchy launch screensaver force`; any key ends it.
   glow
 - `shell.controls.toml` — amber focus and selected states for buttons, tabs
   and dropdowns in the Omarchy shell (the rest of the shell is generated)
+- `shell.lock.toml` — the amber-to-blue gradient on the lock screen's
+  password box
 - `unlock.png` / `preview-unlock.png` — an amber Omarchy logo for the boot /
   disk-unlock screen; pick it under **Menu → Style → Unlock**
 - `preview.png` — a real desktop screenshot (btop, neovim + neo-tree, and
   Files tiled together, matching the layout Omarchy's own stock themes use
   for their previews), shown in the Omarchy theme picker and on
-  [themes.omarchy.org](https://themes.omarchy.org)
+  [omarchy.org/themes](https://omarchy.org/themes/)
 - Everything else (terminal apps, bar, lock screen, etc.) is generated
   automatically by Omarchy from `colors.toml`. The palette is tuned for
   legibility: every text color clears WCAG AA (4.5:1) on the background
@@ -138,10 +145,11 @@ Preview it with `omarchy launch screensaver force`; any key ends it.
 
 ## License
 
-Code (`colors.toml`, `shell.controls.toml`) is MIT licensed — see
+The theme files (`colors.toml`, `icons.theme`, the `shell.*.toml` files,
+`screensaver.txt` and `extras/`) are MIT licensed — see
 [LICENSE](LICENSE). The background images are AI-generated (see
 [Backgrounds](#backgrounds)); feel free to use them as personal desktop
 backgrounds, but please don't resell them. The store names in the artwork are
 fictional.
 
-Made by [Lohan-Pieterse](https://github.com/Lohan-Pieterse).
+Made by Lohan Pieterse ([@Lohan-Pieterse](https://github.com/Lohan-Pieterse)).
