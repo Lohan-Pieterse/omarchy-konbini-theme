@@ -1,0 +1,15 @@
+#!/bin/bash
+# Use the active theme's screensaver.txt when it ships one, and put your own
+# back when you switch to a theme that doesn't.
+# Install: omarchy hook install theme-set extras/screensaver-hook
+
+saver=~/.config/omarchy/branding/screensaver.txt
+theme_saver=~/.local/state/omarchy/current/theme/screensaver.txt
+backup=$saver.user
+
+if [[ -f $theme_saver ]]; then
+  [[ -f $backup ]] || cp "$saver" "$backup"
+  cp "$theme_saver" "$saver"
+elif [[ -f $backup ]]; then
+  mv "$backup" "$saver"
+fi

@@ -13,7 +13,7 @@ starfields.
 | --- | --- |
 | ![Theme picker](screenshots/theme-switcher.jpg)<br>Theme picker | ![Terminal](screenshots/terminal.jpg)<br>Terminal + gradient border |
 | ![Lock screen](screenshots/lockscreen.jpg)<br>Lock screen | ![Second wallpaper](screenshots/desktop-corner-store.jpg)<br>Second wallpaper |
-| ![Boot unlock screen](preview-unlock.png)<br>Boot / disk-unlock screen | |
+| ![Third wallpaper](screenshots/desktop-quiet-street.jpg)<br>Third wallpaper | ![Boot unlock screen](preview-unlock.png)<br>Boot / disk-unlock screen |
 
 ## Install
 
@@ -40,7 +40,7 @@ A manual clone still has its `.git` directory, so Omarchy treats it exactly
 like an installed theme: the same file filtering, and `omarchy theme update`
 keeps it up to date.
 
-**After installing**, cycle between the two wallpapers with:
+**After installing**, cycle between the three wallpapers with:
 
 ```bash
 omarchy theme bg next
@@ -66,10 +66,10 @@ Full values in [`colors.toml`](colors.toml).
 
 ## Backgrounds
 
-Two wallpapers included under `backgrounds/` at a true 3840×2160 (4K). Both
+Three wallpapers included under `backgrounds/` at a true 3840×2160 (4K). All
 were generated with Google's image generation AI at 1376×768, then upscaled
-with Real-ESRGAN (`realesrgan-x4plus-anime`) for clean line art at full
-resolution rather than a blurry stretch.
+with Real-ESRGAN (`realesr-animevideov3`), which keeps the painted texture of
+the wet streets, foliage and skies instead of smoothing it away.
 
 - `01-station-crossing.jpg` — a girl waiting at a rail crossing by a corner
   store. Shown first (Omarchy picks backgrounds alphabetically the first time
@@ -77,6 +77,8 @@ resolution rather than a blurry stretch.
   This is also the wallpaper behind the windows in `preview.png`.
 - `02-corner-store.jpg` — the same fictional Sunset Mart, on a street corner
   under a starry sky.
+- `03-quiet-street.jpg` — a sleeping residential lane after rain, one warm
+  window still lit.
 
 The signage was repainted by hand after generation: real-world brand logos
 were replaced with the fictional Sunset Mart, and garbled AI text on the
@@ -94,6 +96,24 @@ safely preview it without actually locking your session:
 omarchy shell lock preview      # show it
 omarchy shell lock hidePreview  # dismiss it
 ```
+
+## Away screen (optional)
+
+Konbini ships an idle screensaver, `screensaver.txt`: a little night-street
+scene with the Sunset Mart, a streetlamp and the moon, drawn in by Omarchy's
+random text effects in place of the stock logo. Omarchy keeps the screensaver
+in your personal branding rather than in the theme, so it takes one step:
+
+```bash
+# Just use it:
+cp ~/.config/omarchy/themes/konbini/screensaver.txt ~/.config/omarchy/branding/screensaver.txt
+
+# Or swap it in automatically whenever Konbini is the active theme
+# (your own screensaver comes back when you switch themes):
+omarchy hook install theme-set ~/.config/omarchy/themes/konbini/extras/screensaver-hook
+```
+
+Preview it with `omarchy launch screensaver force`; any key ends it.
 
 ## What's themed
 
