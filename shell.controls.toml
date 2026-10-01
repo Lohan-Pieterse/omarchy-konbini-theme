@@ -1,0 +1,29 @@
+[controls]
+# Konbini: amber accent for keyboard focus and the selected/current state;
+# idle and hover chrome stay on the foreground color like stock themes.
+normal-color        = "#D6DEE8"
+normal-fill-alpha   = 0.04
+normal-border       = "#D6DEE8"
+normal-border-width = 1
+normal-border-alpha = 0.4
+
+hover-cursor-color        = "#D6DEE8"
+hover-cursor-fill-alpha   = 0.08
+hover-cursor-border       = "#D6DEE8"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.25
+
+focus-color        = "#F0B87E"
+focus-fill-alpha   = 0.08
+focus-border       = "#F0B87E"
+focus-border-width = 1
+focus-border-alpha = 0.6
+
+selected-color        = "#F0B87E"
+selected-fill-alpha   = 0.14
+selected-border       = "#F0B87E"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.35

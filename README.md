@@ -12,7 +12,8 @@ starfields.
 | | |
 | --- | --- |
 | ![Theme picker](screenshots/theme-switcher.jpg)<br>Theme picker | ![Terminal](screenshots/terminal.jpg)<br>Terminal + gradient border |
-| ![Lock screen](screenshots/lockscreen.jpg)<br>Lock screen | ![Second wallpaper](screenshots/desktop-lawson.jpg)<br>Second wallpaper |
+| ![Lock screen](screenshots/lockscreen.jpg)<br>Lock screen | ![Second wallpaper](screenshots/desktop-corner-store.jpg)<br>Second wallpaper |
+| ![Boot unlock screen](preview-unlock.png)<br>Boot / disk-unlock screen | |
 
 ## Install
 
@@ -52,10 +53,10 @@ omarchy theme bg next
 | accent     | ![#F0B87E](https://placehold.co/16x16/F0B87E/F0B87E.png) | `#F0B87E` |
 | background | ![#121B26](https://placehold.co/16x16/121B26/121B26.png) | `#121B26` |
 | foreground | ![#D6DEE8](https://placehold.co/16x16/D6DEE8/D6DEE8.png) | `#D6DEE8` |
-| red        | ![#E0776B](https://placehold.co/16x16/E0776B/E0776B.png) | `#E0776B` |
+| red        | ![#DC6A62](https://placehold.co/16x16/DC6A62/DC6A62.png) | `#DC6A62` |
 | yellow     | ![#F2C879](https://placehold.co/16x16/F2C879/F2C879.png) | `#F2C879` |
-| orange     | ![#F0A868](https://placehold.co/16x16/F0A868/F0A868.png) | `#F0A868` |
-| green      | ![#8FBF8A](https://placehold.co/16x16/8FBF8A/8FBF8A.png) | `#8FBF8A` |
+| orange     | ![#EE9858](https://placehold.co/16x16/EE9858/EE9858.png) | `#EE9858` |
+| green      | ![#A4D497](https://placehold.co/16x16/A4D497/A4D497.png) | `#A4D497` |
 | cyan       | ![#6FB4C7](https://placehold.co/16x16/6FB4C7/6FB4C7.png) | `#6FB4C7` |
 | blue       | ![#5C89C2](https://placehold.co/16x16/5C89C2/5C89C2.png) | `#5C89C2` |
 | magenta    | ![#A587A8](https://placehold.co/16x16/A587A8/A587A8.png) | `#A587A8` |
@@ -73,12 +74,14 @@ resolution rather than a blurry stretch.
 - `01-station-crossing.jpg` — a girl waiting at a rail crossing by a corner
   store. Shown first (Omarchy picks backgrounds alphabetically the first time
   a theme is applied).
-- `02-lawson-corner.jpg` — a konbini storefront at dusk. This is the
-  wallpaper behind the windows in `preview.png`.
+  This is also the wallpaper behind the windows in `preview.png`.
+- `02-corner-store.jpg` — the same fictional Sunset Mart, on a street corner
+  under a starry sky.
 
-The most noticeable spots of garbled AI signage text (a sign badge, a couple
-of placards) were cleaned up by hand. Some smaller signs still contain
-imperfect Japanese text.
+The signage was repainted by hand after generation: real-world brand logos
+were replaced with the fictional Sunset Mart, and garbled AI text on the
+store signs, banners and crossing plates was replaced with real Japanese
+(24時間営業, おにぎり・お弁当, 踏切注意, 年中無休).
 
 ## Lock screen
 
@@ -97,22 +100,28 @@ omarchy shell lock hidePreview  # dismiss it
 - `colors.toml` — the full Omarchy color palette, including
   `hyprland_active_border`/`hyprland_inactive_border` for an amber-to-blue
   gradient window border
-- `icons.theme` — Yaru-blue-dark, to match the navy/amber palette
+- `icons.theme` — Yaru-yellow, amber folders that match the shop-window
+  glow
+- `shell.controls.toml` — amber focus and selected states for buttons, tabs
+  and dropdowns in the Omarchy shell (the rest of the shell is generated)
+- `unlock.png` / `preview-unlock.png` — an amber Omarchy logo for the boot /
+  disk-unlock screen; pick it under **Menu → Style → Unlock**
 - `preview.png` — a real desktop screenshot (btop, neovim + neo-tree, and
   Files tiled together, matching the layout Omarchy's own stock themes use
-  for their previews), not just the raw wallpaper — shown in the Omarchy
-  theme picker and on the [Omarchy themes site](https://omarchy.org/themes/),
-  if submitted
+  for their previews), shown in the Omarchy theme picker and on
+  [themes.omarchy.org](https://themes.omarchy.org)
 - Everything else (terminal apps, bar, lock screen, etc.) is generated
-  automatically by Omarchy from `colors.toml`
+  automatically by Omarchy from `colors.toml`. The palette is tuned for
+  legibility: every text color clears WCAG AA (4.5:1) on the background
+  except `muted` (≈4:1, used for comments and autosuggestions), and red/green
+  stay distinguishable with red-green color blindness
 
 ## License
 
-Code (`colors.toml`) is MIT licensed — see [LICENSE](LICENSE).
-The background images are AI-generated (see [Backgrounds](#backgrounds)); feel
-free to use them as personal desktop backgrounds, but please don't resell
-them. Brand names and logos visible in the artwork (Lawson, DyDo, Coca-Cola)
-belong to their respective owners; this theme is not affiliated with or
-endorsed by them.
+Code (`colors.toml`, `shell.controls.toml`) is MIT licensed — see
+[LICENSE](LICENSE). The background images are AI-generated (see
+[Backgrounds](#backgrounds)); feel free to use them as personal desktop
+backgrounds, but please don't resell them. The store names in the artwork are
+fictional.
 
 Made by [Lohan-Pieterse](https://github.com/Lohan-Pieterse).
