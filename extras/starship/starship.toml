@@ -1,0 +1,41 @@
+# Konbini starship prompt.
+# Based on Omarchy's default (/usr/share/omarchy/config/starship.toml), same
+# layout, recolored with the Konbini palette (~/.config/omarchy/themes/konbini/colors.toml).
+#
+# Install (back up any existing prompt config first):
+#   [ -f ~/.config/starship.toml ] && mv ~/.config/starship.toml ~/.config/starship.toml.bak
+#   cp ~/.config/omarchy/themes/konbini/extras/starship/starship.toml ~/.config/starship.toml
+
+add_newline = true
+command_timeout = 200
+format = "[$directory$git_branch$git_status]($style)$character"
+
+[character]
+error_symbol = "[✗](bold #F0B87E)"
+success_symbol = "[❯](bold #F0B87E)"
+
+[directory]
+style = "bold #D6DEE8"
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "bold #F0B87E"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+format = "[$branch]($style) "
+style = "italic #F0B87E"
+
+[git_status]
+format     = '[$all_status]($style)'
+style      = "#F0B87E"
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
+conflicted = " "
+up_to_date = " "
+untracked  = "? "
+modified   = " "
+stashed    = ""
+staged     = ""
+renamed    = ""
+deleted    = ""

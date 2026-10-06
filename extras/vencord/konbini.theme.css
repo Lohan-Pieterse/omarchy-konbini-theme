@@ -1,0 +1,86 @@
+/**
+ * @name Konbini
+ * @description Navy/amber Discord theme matching the Konbini Omarchy theme
+ * @author Lohan Pieterse
+ */
+
+:root,
+.theme-dark,
+.theme-darker,
+.theme-midnight,
+.visual-refresh {
+  /* Konbini palette */
+  --konbini-bg: #121B26;
+  --konbini-bg-dark: #0A1119;
+  --konbini-bg-darker: #060A0F;
+  --konbini-bg-light: #1F2E3D;
+  --konbini-fg: #D6DEE8;
+  --konbini-fg-dim: #8092A6;
+  --konbini-fg-bright: #F3F7FC;
+  --konbini-accent: #F0B87E;
+  --konbini-selection: #233B52;
+  --konbini-muted: #667B92;
+  --konbini-green: #A4D497;
+  --konbini-red: #DC6A62;
+  --konbini-yellow: #F2C879;
+
+  /* Classic Discord background/text tokens */
+  --background-primary: var(--konbini-bg);
+  --background-secondary: var(--konbini-bg-dark);
+  --background-secondary-alt: var(--konbini-bg-darker);
+  --background-tertiary: var(--konbini-bg-darker);
+  --background-accent: var(--konbini-selection);
+  --background-floating: var(--konbini-bg-dark);
+  --background-mobile-primary: var(--konbini-bg);
+  --background-mobile-secondary: var(--konbini-bg-dark);
+  --background-modifier-hover: rgba(240, 184, 126, 0.08);
+  --background-modifier-active: rgba(240, 184, 126, 0.15);
+  --background-modifier-selected: var(--konbini-selection);
+  --background-modifier-accent: var(--konbini-selection);
+  --background-message-hover: rgba(31, 46, 61, 0.5);
+
+  --channeltextarea-background: var(--konbini-bg-light);
+  --input-background: var(--konbini-bg-dark);
+
+  --text-normal: var(--konbini-fg);
+  --text-muted: var(--konbini-muted);
+  --text-link: var(--konbini-accent);
+  --header-primary: var(--konbini-fg-bright);
+  --header-secondary: var(--konbini-fg-dim);
+  --interactive-normal: var(--konbini-fg-dim);
+  --interactive-hover: var(--konbini-fg);
+  --interactive-active: var(--konbini-accent);
+  --interactive-muted: var(--konbini-muted);
+
+  --brand-experiment: var(--konbini-accent);
+  --brand-experiment-500: var(--konbini-accent);
+  --focus-primary: var(--konbini-accent);
+
+  --status-online: var(--konbini-green);
+  --status-danger: var(--konbini-red);
+  --status-warning: var(--konbini-yellow);
+
+  --scrollbar-thin-thumb: var(--konbini-selection);
+  --scrollbar-auto-thumb: var(--konbini-selection);
+  --scrollbar-auto-track: var(--konbini-bg-dark);
+
+  /* Newer semantic background-base-* / background-mod-* tokens */
+  --background-base-lowest: var(--konbini-bg-darker);
+  --background-base-low: var(--konbini-bg-dark);
+  --background-base-primary: var(--konbini-bg);
+  --background-base-secondary: var(--konbini-bg-dark);
+  --background-mod-subtle: rgba(240, 184, 126, 0.06);
+  --background-mod-strong: rgba(240, 184, 126, 0.16);
+  --background-surface-high: var(--konbini-bg-light);
+  --background-surface-higher: var(--konbini-selection);
+}
+
+/* Links and mentions in amber */
+a, a[class*="anchor_"] {
+  color: var(--konbini-accent) !important;
+}
+
+.mention {
+  background-color: rgba(240, 184, 126, 0.15) !important;
+  color: var(--konbini-accent) !important;
+}

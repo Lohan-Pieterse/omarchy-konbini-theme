@@ -1,0 +1,29 @@
+# Konbini lazygit theme (keys current as of lazygit v0.65.0 — see `lazygit -c`
+# for the full default config). Not applied automatically.
+#
+# Install: merge this gui.theme block into ~/.config/lazygit/config.yml
+# (if that file already has a `gui:` section, merge `theme:` into it instead
+# of pasting a second top-level `gui:` key).
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#F0B87E"
+      - bold
+    inactiveBorderColor:
+      - "#667B92"
+    selectedLineBgColor:
+      - "#233B52"
+    optionsTextColor:
+      - "#6FB4C7"
+    cherryPickedCommitFgColor:
+      - "#060A0F"
+    cherryPickedCommitBgColor:
+      - "#F0B87E"
+    unstagedChangesColor:
+      - "#DC6A62"
+    searchingActiveBorderColor:
+      - "#F2C879"
+      - bold
+    defaultFgColor:
+      - "#D6DEE8"

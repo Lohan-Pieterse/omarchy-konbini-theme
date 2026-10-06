@@ -1,0 +1,9 @@
+# Konbini gradient for cava: blue -> cyan -> amber
+# cava has no source/include directive: copy all the lines below (including
+# gradient = 1) into the [color] section of ~/.config/cava/config
+
+gradient = 1
+gradient_count = 3
+gradient_color_1 = '#5C89C2'
+gradient_color_2 = '#6FB4C7'
+gradient_color_3 = '#F0B87E'

@@ -1,0 +1,21 @@
+#!/bin/bash
+# Use the active theme's screensaver.txt / about.txt when it ships them, and
+# put your own back when you switch to a theme that doesn't.
+# Install: omarchy hook install theme-set extras/screensaver-hook
+
+swap_branding() {
+  local name="$1"
+  local branded=~/.config/omarchy/branding/"$name"
+  local theme_file=~/.local/state/omarchy/current/theme/"$name"
+  local backup="$branded.user"
+
+  if [[ -f $theme_file ]]; then
+    [[ -f $backup || ! -f $branded ]] || cp "$branded" "$backup"
+    cp "$theme_file" "$branded"
+  elif [[ -f $backup ]]; then
+    mv "$backup" "$branded"
+  fi
+}
+
+swap_branding screensaver.txt
+swap_branding about.txt

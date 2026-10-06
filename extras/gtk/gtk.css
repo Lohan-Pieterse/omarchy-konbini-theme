@@ -1,0 +1,78 @@
+/*
+ * Konbini GTK4 / libadwaita named colors.
+ * Not applied by Omarchy automatically — this file themes GTK4/libadwaita
+ * apps (Nautilus/Files, Settings, Text Editor, etc).
+ *
+ * Install (symlink, so theme updates keep it current):
+ *   mkdir -p ~/.config/gtk-4.0
+ *   ln -sf ~/.config/omarchy/themes/konbini/extras/gtk/gtk.css ~/.config/gtk-4.0/gtk.css
+ *
+ * Values match ~/.config/omarchy/themes/konbini/colors.toml.
+ */
+
+@define-color window_bg_color #121B26;
+@define-color window_fg_color #D6DEE8;
+
+@define-color view_bg_color #0A1119;
+@define-color view_fg_color #D6DEE8;
+
+@define-color headerbar_bg_color #1F2E3D;
+@define-color headerbar_fg_color #D6DEE8;
+@define-color headerbar_border_color #D6DEE8;
+@define-color headerbar_backdrop_color #121B26;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.9);
+
+@define-color sidebar_bg_color #0A1119;
+@define-color sidebar_fg_color #D6DEE8;
+@define-color sidebar_backdrop_color #060A0F;
+@define-color sidebar_border_color #233B52;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color secondary_sidebar_bg_color #060A0F;
+@define-color secondary_sidebar_fg_color #D6DEE8;
+@define-color secondary_sidebar_backdrop_color #060A0F;
+@define-color secondary_sidebar_border_color #233B52;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color card_bg_color #1F2E3D;
+@define-color card_fg_color #D6DEE8;
+@define-color card_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color dialog_bg_color #1F2E3D;
+@define-color dialog_fg_color #D6DEE8;
+
+@define-color popover_bg_color #1F2E3D;
+@define-color popover_fg_color #D6DEE8;
+@define-color popover_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color thumbnail_bg_color #1F2E3D;
+@define-color thumbnail_fg_color #D6DEE8;
+
+@define-color shade_color rgba(0, 0, 0, 0.25);
+@define-color scrollbar_outline_color #060A0F;
+
+/* Accent — Konbini amber, with a dark readable accent_fg_color */
+@define-color accent_color #F0B87E;
+@define-color accent_bg_color #F0B87E;
+@define-color accent_fg_color #060A0F;
+
+/* Destructive — Konbini red */
+@define-color destructive_color #DC6A62;
+@define-color destructive_bg_color #DC6A62;
+@define-color destructive_fg_color #060A0F;
+
+/* Success — Konbini green, dark text reads better on the light pastel bg */
+@define-color success_color #A4D497;
+@define-color success_bg_color #A4D497;
+@define-color success_fg_color #060A0F;
+
+/* Warning — Konbini yellow */
+@define-color warning_color #F2C879;
+@define-color warning_bg_color #F2C879;
+@define-color warning_fg_color #060A0F;
+
+/* Error — Konbini bright red, kept distinct from destructive */
+@define-color error_color #EF9089;
+@define-color error_bg_color #EF9089;
+@define-color error_fg_color #060A0F;

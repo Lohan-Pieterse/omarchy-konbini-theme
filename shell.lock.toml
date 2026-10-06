@@ -1,0 +1,3 @@
+# Konbini: the password box border uses the same amber-to-blue gradient as
+# the window borders; everything else follows colors.toml.
+border-active = "#F0B87E #5C89C2"

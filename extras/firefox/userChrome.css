@@ -1,0 +1,48 @@
+/* Konbini userChrome.css — minimal toolbar/tabs/urlbar tint.
+ * Requires: about:config -> toolkit.legacyUserProfileCustomizations.stylesheets = true
+ * Install: copy into <profile>/chrome/userChrome.css (create the chrome/ dir if missing),
+ * then restart Firefox. */
+
+:root {
+  --konbini-bg: #121B26;
+  --konbini-bg-dark: #0A1119;
+  --konbini-fg: #D6DEE8;
+  --konbini-accent: #F0B87E;
+  --konbini-selection: #233B52;
+}
+
+#navigator-toolbox,
+#nav-bar,
+#titlebar,
+#TabsToolbar {
+  background-color: var(--konbini-bg-dark) !important;
+  color: var(--konbini-fg) !important;
+}
+
+.tab-background {
+  background-color: var(--konbini-bg) !important;
+}
+
+.tabbrowser-tab[selected] .tab-background {
+  background-color: var(--konbini-selection) !important;
+  box-shadow: inset 0 -2px 0 0 var(--konbini-accent) !important;
+}
+
+.tabbrowser-tab .tab-label {
+  color: var(--konbini-fg) !important;
+}
+
+#urlbar,
+#urlbar-background,
+.urlbar-background,
+.urlbar-input-box {
+  background-color: var(--konbini-bg) !important;
+  color: var(--konbini-fg) !important;
+  border-color: var(--konbini-selection) !important;
+}
+
+#urlbar[focused] #urlbar-background,
+#urlbar[focused] .urlbar-background,
+#urlbar[focused] .urlbar-input-box {
+  border-color: var(--konbini-accent) !important;
+}
